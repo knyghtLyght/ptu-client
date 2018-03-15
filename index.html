@@ -11,20 +11,179 @@
   <link rel="stylesheet" href="styles/layouts.css">
   <link rel="stylesheet" href="styles/modules.css">
 
+  <!-- template for Bio -->
+  <script id="sheetHeaderTemplate" type="text/x-handlebars-template">
+    <div data-charId="{{char_id}}">
+      <ul class="sheetHeaderUl">
+        <li>Name: {{name}}</li>
+        <li>Gender: {{gender}}</li>
+        <li>Age: {{age}}</li>
+      </ul>
+      <img src="{{image_url}}">
+      <h2>Description</h2>
+      <p id="Description">{{description}}</p>
+    </div>
+  </script>
+  <!-- template for Capabilities -->
+  <script id="capabilitiesTemplate" type="text/x-handlebars-template">
+    <div data-charId="{{char_id}}">
+      <h2>Capabilities</h2>
+      <ul>
+        <li>Height: {{height}}</li>
+        <li>Weight: {{weight}}</li>
+        <li>Size: {{size}}</li>
+        <li>Class: {{weight_class}}</li>
+        <li>Throw Range: {{throw_range}}</li>
+        <li>Power: {{power}}</li>
+      </ul>
+      <h3>Movement</h3>
+      <ul>
+        <li>Overland: {{overland}}</li>
+        <li>Swim: {{swim}}</li>
+        <li>Jump Long / High: {{long_jump}} / {{high_jump}}</li>
+      </ul>
+      <h3>Special Capabilities</h3>
+      <ul class="specialCapabilities"></ul>
+    </div>
+  </script>
+  <!-- template for stats -->
+  <script id="statsTemplate" type="text/x-handlebars-template">
+    <div data-charId="{{char_id}}">
+      <h2>Stats</h2>
+      <h3>Combat Stats</h3>
+      <ul>
+        <li>Level: {{level}} EXP: {{xp}} / 10</li>
+        <li>HP Max: {{hp_max}} - Injuries {{injuries}} = {{current_max_hp}}</li>
+        <li>AP Max: {{ap_max}} Current: {{ap_current}} Bound: {{ap_bound}}</li>
+        <li>Physical Evade {{phy_evade}}</li>
+        <li>Special Evade {{spc_evade</li>
+        <li>Speed Evade {{spd_evade</li>
+      </ul>
+      <h3>Base</h3>
+      <ul>
+        <li>HP {{hp_stat}}</li>
+        <li>Atk {{atk_stat}}</li>
+        <li>Def {{def_stat}}</li>
+        <li>S.Atk {{satk_stat}}</li>
+        <li>S.Def {{sdef_stat}}</li>
+        <li>Speed {{speed_stat}}</li>
+      </ul>
+      <h3>Stage</h3>
+      <ul>
+          <li>HP {{stage_hp_stat}}</li>
+          <li>Atk {{stage_atk_stat}}</li>
+          <li>Def {{stage_def_stat}}</li>
+          <li>S.Atk {{stage_satk_stat}}</li>
+          <li>S.Def {{stage_sdef_stat}}</li>
+          <li>Speed {{stage_speed_stat}}</li>
+        </ul>
+      <h3>Active</h3>
+      <ul>
+          <li>HP {{act_hp_stat}}</li>
+          <li>Atk {{act_atk_stat}}</li>
+          <li>Def {{act_def_stat}}</li>
+          <li>S.Atk {{act_satk_stat}}</li>
+          <li>S.Def {{act_sdef_stat}}</li>
+          <li>Speed {{act_speed_stat}}</li>
+        </ul>
+    </div>
+  </script>
+  <!-- template for Skills -->
+  <script id="skillsTemplate" type="text/x-handlebars-template">
+    <div data-charId="char_id">
+      <h2>Skills</h2>
+      <h3>Body</h3>
+      <ul>
+        <li>Acrobatics: {{acrobatics}}</li>
+        <li>Athletics: {{athletics}}</li>
+        <li>Combat: {{combat}}</li>
+        <li>Intimadate: {{intimadate}}</li>
+        <li>Stealth: {{stealth}}</li>
+        <li>Survival: {{survival}}</li>
+      </ul>
+      <h3>Mind</h3>
+      <ul>
+        <li>General Edu: {{gen_ed}}</li>
+        <li>Medican Edu: {{med_ed}}</li>
+        <li>Medican Edu: {{med_ed}}</li>
+        <li>Occult Edu: {{occ_ed}}</li>
+        <li>Pokemon Edu: {{pok_ed}}</li>
+        <li>Technolgy Edu: {{tec_ed}}</li>
+        <li>Guile: {{guile}}</li>
+        <li>Perception: {{perception}}</li>
+      </ul>
+      <h3>Spirit</h3>
+      <ul>
+        <li>Charm: {{charm}}</li>
+        <li>Command: {{command}}</li>
+        <li>Focus: {{focus}}</li>
+        <li>Intuition: {{intuition}}</li>
+      </ul>
+    </div>
+  </script>
+  <!-- template for Class list -->
+  <script id="classListTemplate" type="text/x-handlebars-template">
+    <div data-charId="char_id">
+      <h3>Class</h3>
+      <h3>{{class}}}</h3>
+    </div>
+  </script>
   <!-- template for ** -->
-  <script id="" type="text/x-handlebars-template">
-
+  <script id="abiFeatEdgeTemplate" type="text/x-handlebars-template">
+    <div data-charId="char_id"></div>
+  </script>
+  <!-- template for ** -->
+  <script id="moveListTemplate" type="text/x-handlebars-template">
+    <div data-charId="char_id"></div>
+  </script>
+  <!-- template for ** -->
+  <script id="creationListTemplate" type="text/x-handlebars-template">
+    <div data-charId="char_id"></div>
+  </script>
+  <!-- template for ** -->
+  <script id="equipedTemplate" type="text/x-handlebars-template">
+    <div data-charId="char_id"></div>
+  </script>
+  <!-- template for ** -->
+  <script id="progressionTemplate" type="text/x-handlebars-template">
+    <div data-charId="char_id"></div>
+  </script>
+  <!-- template for ** -->
+  <script id="invintoryTemplate" type="text/x-handlebars-template">
+    <div data-charId="char_id"></div>
   </script>
 </head>
+
 <body>
   <header>
 
   </header>
   <main>
     <!-- Login Section -->
-    <form id="loginForm">
-      <input type="text" name="loginInput" id="loginInput">
-    </form>
+    <section class="login view">
+      <form id="loginForm">
+        <input type="text" name="loginInput" id="loginInput">
+        <button>Login</button>
+      </form>
+  </section>
+    <!-- Sheet list Section -->
+    <section class="sheetList view">
+      <form id="sheetSelectForm">
+        <select name="sheetList" id="sheetListSelect">
+          <option value="example">Example sheet</option>
+        </select>
+        <button id="selectButton">Select</button>
+        <button id="newButton">New Character</button>
+      </form>
+    </section>
+    <!-- Sheet Section -->
+    <section class="sheet view">
+
+    </section>
+    <!-- Update Section -->
+    <section class="update view">
+
+    </section>
   </main>
     <!-- CDN resources -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
